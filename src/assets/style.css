@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+/* =========================================
+   1. RESET Y BASE
+   ========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+
+body { 
+    background-color: #0d0d12; color: #ffffff; min-height: 100vh; padding: 2rem 1rem; 
+    display: flex; justify-content: flex-start; align-items: center; flex-direction: column; 
+}
+
+/* =========================================
+   2. CONTENEDOR BENTO GRID
+   ========================================= */
+.bento-container { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(250px, auto); gap: 1.5rem; width: 100%; max-width: 1300px; }
+
+.bento-item { 
+    background: #1a1a24; border-radius: 24px; padding: 2rem; 
+    display: flex; flex-direction: column; justify-content: space-between; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border: 1px solid rgba(255, 255, 255, 0.05); overflow: hidden; position: relative;
+    min-width: 0; 
+}
+
+.bento-item:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+.bento-item h3 { margin-bottom: 0.5rem; font-size: 1.3rem; }
+.bento-item p { font-size: 0.9rem; color: #a0a0b0; }
+
+/* =========================================
+   3. DIMENSIONES EN LA GRILLA
+   ========================================= */
+.hero { grid-column: span 2; grid-row: span 2; background: linear-gradient(135deg, #2c2c3e 0%, #1a1a24 100%); justify-content: center; }
+.hero h1 { font-size: 3.5rem; color: #ff007f; margin-bottom: 0.5rem; line-height: 1; }
+.hero h2 { font-size: 1.2rem; color: #e0e0e0; font-weight: 400; margin-bottom: 1rem; }
+
+#modulo-asistencia { 
+    grid-column: span 2; grid-row: span 2; background-color: #1a1a24;
+}
+
+/* =========================================
+   5. COMPONENTES UI GLOBALES
+   ========================================= */
+.status-indicator { display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem; text-transform: uppercase; background: rgba(0, 255, 127, 0.1); color: #00ff7f; padding: 4px 12px; border-radius: 20px; width: max-content; margin-bottom: 15px; }
+.status-indicator span { width: 8px; height: 8px; background-color: #00ff7f; border-radius: 50%; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 255, 127, 0.4); } 70% { box-shadow: 0 0 0 6px rgba(0, 255, 127, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 255, 127, 0); } }
+.btn-demo, .btn-code { width: 100%; padding: 10px; margin-top: 10px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; border: none; font-size: 0.8rem; display: flex; justify-content: center; align-items: center; gap: 8px; }
+.btn-demo { background-color: #ff007f; color: white; }
+.btn-demo:hover { background-color: #e60073; }
+.btn-code { background-color: rgba(255, 255, 255, 0.1); color: #fff; }
+.btn-code:hover { background-color: rgba(255, 255, 255, 0.2); }
+h2 i, h3 i { color: #00ff7f; margin-right: 8px; vertical-align: middle; }
+.hero h2 i { color: #ff007f; }
+
+/* =========================================
+   6. MÓDULO HERO (PERFIL)
+   ========================================= */
+.hero-profile { display: flex; align-items: center; gap: 25px; margin-bottom: 20px; }
+.hero-avatar { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255, 0, 127, 0.5); box-shadow: 0 0 20px rgba(255, 0, 127, 0.2); flex-shrink: 0; }
+.hero-text { display: flex; flex-direction: column; justify-content: center; }
+.hero-contact { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+.hero-contact span, .hero-contact .contact-link { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: #e0e0e0; background: rgba(255, 255, 255, 0.1); padding: 6px 12px; border-radius: 20px; transition: background 0.3s ease, color 0.3s ease; text-decoration: none; }
+.hero-contact .contact-link:hover { background: rgba(255, 255, 255, 0.2); color: #00ff7f; cursor: pointer; }
+.hero { justify-content: flex-start; } 
+.hero-formacion { margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; overflow: hidden; }
+.formacion-title { font-size: 0.85rem; color: #00ff7f; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+.hero-lista { max-height: 110px; overflow-y: auto; }
+
+/* =========================================
+   9. MÓDULO FORMACIÓN
+   ========================================= */
+.estudios-lista { margin-top: 15px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; padding-right: 5px; }
+.estudios-lista::-webkit-scrollbar { width: 4px; }
+.estudios-lista::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 4px; }
+.estudios-lista::-webkit-scrollbar-thumb { background: #00ff7f; border-radius: 4px; }
+.estudio-item { background: rgba(0, 0, 0, 0.3); border-left: 3px solid #00ff7f; padding: 10px 12px; border-radius: 0 6px 6px 0; transition: transform 0.2s ease, background 0.2s ease; }
+.estudio-item:hover { transform: translateX(5px); background: rgba(0, 255, 127, 0.1); }
+.estudio-item h4 { font-size: 0.85rem; color: #ffffff; margin-bottom: 3px; }
+.estudio-item p { font-size: 0.75rem !important; color: #a0a0b0; font-family: monospace; }
+
+/* =========================================
+   12. TAGS
+   ========================================= */
+.project-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+.tag { background: rgba(0, 255, 127, 0.1); border: 1px solid rgba(0, 255, 127, 0.3); color: #00ff7f; padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; display: flex; align-items: center; gap: 6px; transition: all 0.3s ease; cursor: default; }
+.tag:hover { background: rgba(0, 255, 127, 0.2); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 255, 127, 0.1); }
+
+/* =========================================
+   13. RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 1024px) { 
+    .bento-container { grid-template-columns: repeat(2, 1fr); } 
+    .hero, #modulo-asistencia, .tech-app { grid-column: span 2 !important; grid-row: auto !important; }
+}
+@media (max-width: 900px) {
+    .bento-container { display: flex !important; flex-direction: column !important; gap: 1.5rem; }
+    .hero-profile { flex-direction: column; text-align: center; gap: 15px; }
+    .hero h1 { font-size: 2.8rem; margin-top: 10px; }
+    .hero-avatar { width: 120px; height: 120px; }
+    .hero-contact { flex-direction: column; gap: 10px; align-items: stretch; }
+    .hero-contact span, .hero-contact .contact-link { justify-content: center; }
+}
