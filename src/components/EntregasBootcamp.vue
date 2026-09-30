@@ -1,7 +1,7 @@
 <template>
   <article class="bento-item tech-app" style="grid-column: span 2;">
     <div class="status-indicator"><span></span> REPOSITORIOS ACADÉMICOS</div>
-    <h3 style="color: #00ff7f;"><i class="ph ph-folder-open"></i> Entregas Bootcamp</h3>
+    <h3 style="color: #00ff7f;"><i class="ph ph-folder-open"></i> ENTREGAS DESARROLLO DE APLICACIONES FRONT-END TRAINEE</h3>
     <p style="font-size: 0.85rem; color: #a0a0b0; margin-bottom: 15px;">Módulos 2 al 7 desarrollados durante el programa.</p>
 
     <div class="estudios-lista" style="height: 100%; overflow-y: auto; padding-right: 5px;">
@@ -14,7 +14,7 @@
         <p>Módulo 3 - HTML/CSS</p>
       </a>
       <a href="https://github.com/kisitoledom-coder/modulo4_ABP" target="_blank" class="estudio-item" style="display: block; text-decoration: none; margin-bottom: 8px;">
-        <h4 style="color: #fff;"><i class="ph ph-github-logo"></i> Módulo 4 ABP</h4>
+        <h4 style="color: #fff;"><i class="ph ph-github-logo"></i> Calculadora </h4>
         <p>Módulo 4 - JavaScript Vanilla</p>
       </a>
             <a href="https://github.com/Muss3t/taskflow" target="_blank" class="estudio-item" style="display: block; text-decoration: none;">
