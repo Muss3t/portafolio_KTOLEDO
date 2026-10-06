@@ -5,7 +5,7 @@
 ¡Hola! Bienvenid@ a mi portafolio oficial. Este proyecto fue desarrollado con Vue.js utilizando una arquitectura de Bento Grid.
 
 **Puedes ver este proyecto funcionando en vivo aquí:** 
-[Ver Portafolio en Vivo](https://AQUI-PEGA-TU-LINK-DE-VERCEL.vercel.app)
+[Ver Portafolio en Vivo](https://portafolio-ktoledo-yf8i.vercel.app)
 
 ---
 
