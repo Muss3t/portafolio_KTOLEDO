@@ -106,7 +106,7 @@ const proyectos = ref([
   { titulo: 'Cohete Espacial', desc: 'Diseño e Impresión 3D', img: 'cohete.png' },
   { titulo: 'Cohete v2', desc: 'Iteración de Prototipo 3D', img: 'cohete-2.png' },
   { titulo: 'Espada', desc: 'Prototipado y Fabricación', img: 'espada.png' },
-  { titulo: 'Helicóptero', desc: 'Diseño e Impresión 3D', img: 'Helicoptero.png' },
+  { titulo: 'Helicóptero', desc: 'Diseño e Impresión 3D', img: 'helicoptero.png' },
   { titulo: 'Violín', desc: 'Modelado y Fabricación', img: 'violin.png' },
   { titulo: 'Juguete Inclusivo 1', desc: 'Diseño de Elemento Lúdico', img: 'juguete_1.png' },
   { titulo: 'Alfabetizador C-BRAILLE', desc: 'Herramienta Multisensorial', img: 'alfabetizador-braille.png' },
